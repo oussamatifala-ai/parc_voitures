@@ -41,6 +41,10 @@ class Parc:
         places = self.capacite - len(self.listeVoitures)
         return places
 
+    # fonction verifier si le parc est plein
+    def nombreVoitures(self):
+        return len(self.listeVoitures)
+
 parc1 = Parc(1, "Toronto", 3)
 v1 = Voiture("AAA111", "Toyota", "Rouge")
 v2 = Voiture("BBB222", "Honda", "Noir")
@@ -48,7 +52,8 @@ v3 = Voiture("CCC333", "Ford", "Blanc")
 parc1.entrerVoiture(v1)
 parc1.entrerVoiture(v2)
 parc1.entrerVoiture(v3)
+print("Programme Parc Voitures")
 print("Places libres:", parc1.calculerNbrPlacesLibres())
 parc1.sortirVoiture(v2)
 print("Places libres:", parc1.calculerNbrPlacesLibres())
-print("Programme Parc Voitures")
+print("Fin du programme")
